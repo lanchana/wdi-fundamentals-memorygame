@@ -45,6 +45,13 @@ h2 {
     margin: 8%;
 }
 
+img {
+    height: 200px;
+    max-height: 100%;
+    width: 150px;
+    max-width: 100%;
+}
+
 .ftext-color {
     color: #ff0000;
 }
