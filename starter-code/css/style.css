@@ -15,8 +15,14 @@ nav {
     background-color: #ee5f3c;
 }
 
-.align {
-    text-align: center;
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    font-size: 0;
+    background-color: #808080;
 }
 
 h1 {
@@ -25,6 +31,10 @@ h1 {
 
 h2 {
     color: #ffd700;
+}
+
+.align {
+    text-align: center;
 }
 
 .board {
@@ -52,20 +62,23 @@ img {
     max-width: 100%;
 }
 
-.ftext-color {
-    color: #ff0000;
+.buttons {
+    /*padding: 5px;*/
+    margin: 5px auto;
+    text-align: center;
 }
 
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    content: " ";
-    clear: both;
-    height: 0;
-    font-size: 0;
-    background-color: #808080;
+button {
+    padding: 5px 10px;
+    color: rgb(2, 132, 130);
+    border-radius: 5px;
+    margin: 0 10px;
 }
 
 footer {
     background-color: #808080;
+}
+
+.ftext-color {
+    color: #ff0000;
 }

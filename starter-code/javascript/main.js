@@ -4,8 +4,13 @@
 // var cards = ['queen', 'queen', 'king', 'king'];
 // var cardsInPlay =[];
 
-var cards =['queen', 'queen', 'king', 'king'];
-var cardsInPlay =[];
+var cards = [
+        'queen',
+        'queen',
+        'king',
+        'king'
+    ];
+var cardsInPlay =[ ];
 var gameBoard = document.getElementById('game-board');
 var cardElement = document.getElementsByClassName('card');
 var win = 0;
@@ -26,29 +31,28 @@ var createBoard = function() {
         cardElement[i].setAttribute('data-card', cards[i]);
         cardElement[i].addEventListener('click', isTwoCards);
     }
-}
+};
 
 var isTwoCards = function() {
     cardsInPlay.push(this.getAttribute('data-card'));
-console.log("asfds");
-  if(this.getAttribute('data-card') === 'queen') {
+
+    if(this.getAttribute('data-card') === 'queen') {
         this.innerHTML = '<img src="images/diamonds-884199_1280.png" alt="Queen of Spades"/>';
     }
-    else{
+    else {
         this.innerHTML = '<img src="images/spades-884197_1280.png" alt="King of Spades"/>';
     }
-if (cardsInPlay.length === 2) {
-    isMatch(cardsInPlay);
-    cardsInPlay = [];
-}
 
-}
+    if (cardsInPlay.length === 2) {
+        isMatch(cardsInPlay);
+        cardsInPlay = [];
+    }
+};
 
 var isMatch = function() {
-    if(cardsInPlay[0] === cardsInPlay[1]){
+    if(cardsInPlay[0] === cardsInPlay[1]) {
         alert("You found a match!");
         win++;
-        // cardElement.innerHTML = '';
     }
     else
     {
@@ -58,9 +62,8 @@ var isMatch = function() {
     // for(var i = 0; i < cardElement.length; i++){
 //         cardElement[i].innerHTML = " ";
 //     }
-}
+};
 
-// reset.addEventListener('click', clear);
 document.getElementById("reset").onclick = function() {
    for(var i = 0; i < cardElement.length; i++){
         cardElement[i].innerHTML = " ";
@@ -68,8 +71,9 @@ document.getElementById("reset").onclick = function() {
 };
 
 document.getElementById("score").onclick = function() {
-   alert("your score\n" + "No. of Wins: " + win + "\nNo of Loses: " + lose);
+   alert("Your score\n" + "No. of Wins: " + win + "\nNo. of Loses: " + lose);
 };
+
 createCards();
 
 
