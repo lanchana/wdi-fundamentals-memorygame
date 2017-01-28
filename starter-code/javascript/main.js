@@ -11,6 +11,14 @@ var cards = [
         'king',
         'king'
     ];
+cards = shuffleArray(cards);
+console.log(cards[0]);
+var cardsInPlay =[ ];
+var gameBoard = document.getElementById('game-board');
+var cardElement = document.getElementsByClassName('card');
+var win = 0;
+var lose = 0;
+// console.log(cardsInPlay.length);
 // var cards = randomCards[Math.floor(Math.random()*randomCards.length)];
 // for(var i =0; i<cards.length; i++){
 // console.log(cards[i]);
@@ -24,18 +32,7 @@ function shuffleArray(cards) {
         cards[j] = temp;
     }
     return cards;
-}
-
-cards = shuffleArray(cards);
-
-var cardsInPlay =[ ];
-var gameBoard = document.getElementById('game-board');
-var cardElement = document.getElementsByClassName('card');
-var win = 0;
-var lose = 0;
-// var reset =document.getElementById('reset');
-console.log(cardsInPlay.length)
-
+};
 
 var createCards = function() {
     for(var i = 0; i < cards.length; i++) {
@@ -56,10 +53,10 @@ var createBoard = function() {
 var isTwoCards = function() {
     // console.log(cardsInPlay.length);
     if(cardsInPlay.length >= 2 ) {
-        cardsInPlay = [];
-        for(var i = 0; i < cardElement.length; i++){
-        cardElement[i].innerHTML = " ";
-    }
+            cardsInPlay = [];
+            for(var i = 0; i < cardElement.length; i++){
+            cardElement[i].innerHTML = " ";
+        }
     }
     cardsInPlay.push(this.getAttribute('data-card'));
 
@@ -74,8 +71,6 @@ var isTwoCards = function() {
         isMatch(cardsInPlay);
         // cardsInPlay = [];
     }
-
-
 };
 
 var isMatch = function() {
@@ -88,9 +83,6 @@ var isMatch = function() {
         alert("Sorry, try again.");
         lose++;
     }
-
-
-
     // for(var i = 0; i < cardElement.length; i++){
 //         cardElement[i].innerHTML = " ";
 //     }
