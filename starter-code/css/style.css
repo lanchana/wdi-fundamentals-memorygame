@@ -1,3 +1,8 @@
+body {
+    margin: 0 auto;
+    background-color: #c5d0e2;
+}
+
 nav {
     background-color: #808080;
     /*width: 100%;*/
@@ -35,13 +40,25 @@ h2 {
 
 .align {
     text-align: center;
+    /*color: #2d579b;*/
+}
+.pclass {
+    padding: 0 10%;
+    font-size: 19px;
+    line-height: 1.5em;
+}
+
+#instructions {
+    color: #2d579b;
 }
 
 .board {
-    height: 50%;
-    width: 50%;
-    display: inline-block;
-    /*text-align: left;*/
+    height: 45%;
+    width: 35%;
+    overflow: auto;
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    margin: 0 auto;
 }
 
 .card {
@@ -52,7 +69,11 @@ h2 {
     background-color: rgb(255, 255, 0);
     border-radius: 10px;
     float: left;
+    /*floadt: justify;*/
     margin: 8%;
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+
 }
 
 img {
@@ -79,6 +100,12 @@ footer {
     background-color: #808080;
 }
 
+h6 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .ftext-color {
     color: #ff0000;
+    font-size: 15px;
 }

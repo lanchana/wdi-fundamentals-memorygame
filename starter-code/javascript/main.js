@@ -61,10 +61,14 @@ var isTwoCards = function() {
     cardsInPlay.push(this.getAttribute('data-card'));
 
     if(this.getAttribute('data-card') === 'queen') {
+        console.log("loaded image");
         this.innerHTML = '<img src="images/diamonds-884199_1280.png" alt="Queen of Spades"/>';
+        console.log("loaded image");
     }
     else {
+        console.log("loaded image");
         this.innerHTML = '<img src="images/spades-884197_1280.png" alt="King of Spades"/>';
+        console.log("loaded image");
     }
 
     if (cardsInPlay.length === 2) {
