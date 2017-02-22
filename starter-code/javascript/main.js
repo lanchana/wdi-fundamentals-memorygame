@@ -8,6 +8,8 @@
 var cards = [
         'queen',
         'queen',
+        'queen',
+        'king',
         'king',
         'king'
     ];
@@ -34,9 +36,11 @@ function shuffleArray(cards) {
     return cards;
 };
 
+
 var createCards = function() {
     for(var i = 0; i < cards.length; i++) {
         var cardDiv = document.createElement('div');
+        // doc
         cardDiv.className = 'card';
         gameBoard.appendChild(cardDiv);
     }
