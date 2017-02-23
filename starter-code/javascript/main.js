@@ -5,15 +5,30 @@
 // var cards = ['queen', 'queen', 'king', 'king'];
 // var cardsInPlay =[];
 
+var getMeRandomElements = function(sourceArray, neededElements) {
+    var result = [];
+    for (var i = 0; i < neededElements; i++) {
+        result.push(sourceArray[Math.floor(Math.random()*sourceArray.length)]);
+    }
+    return result;
+};
+
 var cards = [
+        'queen',
+        'king',
         'queen',
         'queen',
         'queen',
         'king',
+        'king',
+        'king',
+        'queen',
+        'queen',
         'king',
         'king'
     ];
-cards = shuffleArray(cards);
+// cards = shuffleArray(cards);
+cards = getMeRandomElements(cards, 6);
 console.log(cards[0]);
 var cardsInPlay =[ ];
 var gameBoard = document.getElementById('game-board');
@@ -26,19 +41,19 @@ var lose = 0;
 // console.log(cards[i]);
 // }
 
-function shuffleArray(cards) {
-    for (var i = cards.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = cards[i];
-        cards[i] = cards[j];
-        cards[j] = temp;
-    }
-    return cards;
-}
-
+// function shuffleArray(cards) {
+//     for (var i = cards.length - 1; i > 0; i--) {
+//         var j = Math.floor(Math.random() * (i + 1));
+//         var temp = cards[i];
+//         cards[i] = cards[j];
+//         cards[j] = temp;
+//     }
+//     return cards;
+// }
 
 var createCards = function() {
-    for(var i = 0; i < cards.length; i++) {
+    // for(var i = 0; i < cards.length; i++) {
+    for(var i = 0; i < 6; i++) {
         var cardDiv = document.createElement('div');
         // doc
         cardDiv.className = 'card';
@@ -100,6 +115,7 @@ document.getElementById("reset").onclick = function() {
    for(var i = 0; i < cardElement.length; i++){
         cardElement[i].innerHTML = " ";
     }
+
 };
 
 document.getElementById("score").onclick = function() {
