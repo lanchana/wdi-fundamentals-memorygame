@@ -34,7 +34,7 @@ function shuffleArray(cards) {
         cards[j] = temp;
     }
     return cards;
-};
+}
 
 
 var createCards = function() {
@@ -130,9 +130,3 @@ createCards();
 // else {
 //     alert("Sorry, try again.");
 // }
-
-
-
-
-
-

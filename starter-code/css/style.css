@@ -7,15 +7,16 @@ body {
 nav {
     /*background-color: #808080;*/
     background: rgb(35,83,138); /* Old browsers */
-background: -moz-linear-gradient(left, rgba(35,83,138,1) 0%, rgba(167,207,223,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(35,83,138,1) 0%,rgba(167,207,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(35,83,138,1) 0%,rgba(167,207,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#a7cfdf',GradientType=1 );
+    background: -moz-linear-gradient(left, rgba(35,83,138,1) 0%, rgba(167,207,223,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(35,83,138,1) 0%,rgba(167,207,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(35,83,138,1) 0%,rgba(167,207,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#a7cfdf',GradientType=1 );*/
+
 }
 
 .nav-items {
     color: black;
-    padding: 35px;
+    padding: 10px 35px;
     display: block;
     float: left;
 }
@@ -67,11 +68,42 @@ h2 {
     text-align: center;
     float:left;
     background: rgb(109,0,25); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(109,0,25,1) 0%, rgba(143,2,34,1) 34%, rgba(169,3,41,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(109,0,25,1) 0%,rgba(143,2,34,1) 34%,rgba(169,3,41,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(109,0,25,1) 0%,rgba(143,2,34,1) 34%,rgba(169,3,41,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 );
+    background: -webkit-linear-gradient(rgba(109,0,25,1) 0%, rgba(143,2,34,1) 34%, rgba(169,3,41,1) 100%);
+    background: -o-linear-gradient(rgba(109,0,25,1) 0%, rgba(143,2,34,1) 34%, rgba(169,3,41,1) 100%);
+    background: linear-gradient(rgba(109,0,25,1) 0%, rgba(143,2,34,1) 34%, rgba(169,3,41,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 );*/
+    -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
 }
+
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+/*.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}*/
+.card:hover, .card:focus, .card:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+
 
 .board {
     height: 45%;
